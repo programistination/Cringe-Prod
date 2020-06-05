@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+/*
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Caveat', cursive;
+
+    font-family: 'Amatic SC', cursive;
+*/
+
+:root {
+   --bg: #242020;
+   --logo-main: #f1f0ea;
+   --logo-sub: #a006fa;
+   --links: #22a7f0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   padding: 0;
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+}
+
+img {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+a {
+   text-decoration: none;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+}
+
+.container {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* HEADER STYLING START*/
+
+header {
+   position: fixed;
+   z-index: 655;
+   top: 0;
+   width: 100%;
+   display: block;
+   text-align: center;
+   padding: 1em;
+   margin: 0;
+   user-select: none;
+   background: transparent;
+   box-sizing: border-box;
+   transition: 0.5s cubic-bezier(0.63, 0.05, 0.53, 0.64);
+}
+
+header h1 {
+   display: block;
+   margin: 0;
+   padding: 0;
+   font-weight: 700;
+   font-size: 1.8em;
+   font-family: 'Raleway';
+   color: white;
+   overflow: hidden;
+   transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+header h1:hover {
+   color: var(--links);
+}
+
+nav {
+   position: relative;
+   padding: 0;
+   margin: 0;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-around;
+   align-items: center;
+   padding: 0;
+   margin: 0;
+}
+
+nav li {
+   padding: 0;
+}
+
+nav a {
+   position: relative;
+   margin: 0;
+   text-decoration: none;
+   color: white;
+   font-size: 1.15em;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 500;
+   text-transform: uppercase;
+   padding: 0.5em;
+   margin-right: 2em;
+   cursor: pointer;
+   z-index: 5;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+nav a::after {
+   content: '';
+   position: absolute;
+   top: 95%;
+   bottom: 0;
+   left: 50%;
+   right: 0;
+   width: 0%;
+   z-index: -2;
+   background: white;
+   transform: translate(-50%, -50%);
+   transition: all 0.5s cubic-bezier(0.9, 0.04, 0.3, 0.74);
+}
+
+nav a:hover::after {
+   width: 100%;
+}
+
+.active {
+   background: white;
+   color: var(--links);
+   border-radius: 20px;
+}
+
+nav .active::before,
+nav .active::after {
+   display: none;
+}
+
+/* HEADER STYLING END*/
+
+#section-a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+#section-a-bg {
+   position: absolute;
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.39) 75%, #000000be 100%),
+      url(/pics/ceinge.jpg);
+   background-position: 0 65%;
+   background-size: cover;
+   background-attachment: fixed;
+   background-blend-mode: normal;
+   width: 100%;
+   height: 750px;
+   z-index: -1;
+   transition: background-position 1.5s ease-in-out;
+   filter: saturate(150%);
+}
+
+#section-a .content {
+   display: block;
+   padding: 5em;
+   margin: 2em 8em;
+   box-sizing: border-box;
+}
+
+#section-a .content h1 {
+   margin: 12.19% 0 0 0;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 3.6em;
+   font-weight: 400;
+   color: white;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.74);
+}
+#section-a .content p {
+   margin: 1em 2em 2em 0;
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.2em;
+   font-weight: 500;
+   line-height: 1.5em;
+   color: rgba(255, 255, 255, 0.856);
+}
+
+#rm-btn {
+   display: inline-block;
+   text-decoration: none;
+   font-family: 'Ubuntu', cursive;
+   font-size: 1.5em;
+   padding: 0.5em 1em;
+   color: white;
+   border: 1px solid white;
+   border-radius: 30px;
+
+   transition: 0.4s ease-in-out;
+}
+
+#rm-btn:hover {
+   color: #332f74;
+   background: white;
+   box-shadow: -20px -20px 30px 2px #332f74;
+   transition: 0.4s ease-in-out;
+}
+
+#section-b {
+   display: block;
+   text-align: center;
+   padding: 2em;
+   margin: 1em 2em;
+   box-sizing: border-box;
+}
+
+#section-b-title {
+   display: inline-block;
+   position: relative;
+   user-select: none;
+   font-size: 2.2em;
+   margin: 6rem 0 2rem 0;
+   padding: 0.5em 1em;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   overflow: hidden;
+   z-index: 4;
+   transition: all 0.4s cubic-bezier(0.64, 0, 0.27, 1);
+   box-sizing: border-box;
+}
+
+#section-b-title::before {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: #0285ff;
+   z-index: -1;
+   transform: translate(0, 97%);
+   transition: all 0.6s cubic-bezier(0.64, 0, 0.27, 1);
+}
+#section-b-title::after {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: black;
+   z-index: -2;
+   height: 100%;
+   transform: translate(0, 100%);
+   transition: all 0.3s cubic-bezier(0.64, 0, 0.27, 1);
+}
+#section-b-title:hover::before {
+   transform: translate(0, -100%);
+}
+#section-b-title:hover::after {
+   transform: none;
+}
+#section-b-title:hover {
+   letter-spacing: 10.9px;
+   color: white;
+}
+
+#section-b ul {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   list-style: none;
+   transition: all 0.5s ease-in-out;
+}
+
+#section-b li {
+   margin: 2em;
+}
+
+.card {
+   position: relative;
+}
+
+.card-title {
+   display: inline-block;
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.6em;
+   font-weight: 800;
+   padding: 1em;
+}
+
+.card img {
+   object-fit: cover;
+   position: relative;
+   border-radius: 7px;
+   cursor: pointer;
+   transition: all 0.6s cubic-bezier(0.64, 0, 0.27, 1);
+   min-height: 400px;
+   max-height: 400px;
+}
+
+.readmore {
+   margin: 0;
+   padding: 0.3em;
+   font-family: Helvetica, sans-serif;
+   font-weight: 800;
+   font-size: 1.1em;
+   color: var(--links);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 80;
+   transform: translate(-50%, -50%);
+   cursor: pointer;
+   opacity: 0;
+   transition: all 0.5s ease-in-out;
+   overflow: hidden;
+}
+
+.readmore::before {
+   border-radius: 10px;
+   position: absolute;
+   content: '';
+   top: 100%;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   background-color: white;
+   transition: all 0.4s ease-in-out;
+}
+
+.readmore::after {
+   border-radius: 10px;
+   position: absolute;
+   content: '';
+   top: 90%;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   background: var(--links);
+   transition: all 0.4s ease-in-out;
+   z-index: -2;
+}
+
+figure:hover > .readmore::after {
+   top: 0;
+}
+
+figure {
+   display: block;
+   position: relative;
+   cursor: pointer;
+   text-align: center;
+}
+
+figure:hover .readmore {
+   opacity: 1;
+   transition: all 0.4s ease-in-out;
+}
+
+figure:hover > img {
+   filter: brightness(85%);
+   border-radius: 30px;
+   transition: all 0.4s ease-in-out;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.733);
+}
+
+figure:hover > .readmore:hover::before {
+   top: 0;
+}
+
+.readmore a {
+   color: white;
+}
+
+.readmore:hover > a {
+   color: var(--links);
+   transition: all 0.4s ease-in-out;
+}
+
+figure > img {
+   position: relative;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   border-radius: 10px;
+   background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      #00253d62 40%,
+      var(--links)
+   );
+   background-repeat: no-repeat;
+   z-index: 12;
+   opacity: 0;
+   transition: all 0.4s ease-in-out;
+}
+
+figure:hover > .overlay {
+   opacity: 0.9;
+   border-radius: 30px;
+   transition: all 0.4s ease-in-out;
+}
+
+#section-c {
+   user-select: none;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   text-align: center;
+   height: 250px;
+   margin-bottom: 2em;
+}
+
+#section-c-title {
+   font-family: 'Raleway', sans-serif;
+   font-weight: 600;
+   color: white;
+   font-size: 2.5em;
+   padding: 1em;
+   margin: 0;
+   display: block;
+   text-shadow: 0 0 15px black;
+}
+
+#section-c-bg {
+   position: absolute;
+   background: url(https://wallpaperaccess.com/full/50476.jpg),
+      linear-gradient(rgba(117, 117, 117, 0.459), black);
+   background-blend-mode: multiply;
+   background-repeat: no-repeat;
+   background-position: 0 50%, center;
+   background-size: cover;
+   width: 100%;
+   height: 250px;
+   z-index: -1;
+   transition: background-position 1.5s ease-in-out;
+}
+
+#store-btn {
+   position: relative;
+   display: block;
+   text-decoration: none;
+   padding: 0.7em 1.5em;
+   z-index: 2;
+   border-radius: 30px;
+   border: 1px solid white;
+   cursor: pointer;
+   font-size: 1.4em;
+   font-family: Ubuntu;
+   font-weight: 500;
+   color: rgb(255, 255, 255);
+   transition: all 0.5s ease-in-out;
+}
+
+#store-btn:hover {
+   box-shadow: 0 0 25px 1px rgb(0, 0, 0);
+   background: white;
+   color: black;
+}
+
+#store-btn:active {
+   box-shadow: 0 0 15px 1px rgba(4, 217, 255, 0.719);
+   transition: all 0.1s ease-in-out;
+}
+
+#section-d {
+   text-align: center;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+   color: rgb(252, 247, 247);
+}
+
+#section-d-title {
+   user-select: none;
+   display: inline-block;
+   font-family: 'Ubuntu';
+   padding: 0.5em 1.5em;
+   margin-top: 2em;
+   margin-bottom: 1em;
+   font-size: 3.2em;
+   font-size: 2em;
+   letter-spacing: 0.1em;
+   color: rgb(253, 253, 253);
+   border-radius: 30px;
+   background: rgb(15, 15, 15);
+   transition: 0.4s ease-in-out;
+}
+
+#section-d-title:hover {
+   box-shadow: 0 0 40px -1px black;
+   transition: 0.4s ease-in-out;
+}
+
+#section-d ul {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+   list-style: none;
+   text-align: center;
+   margin: 0 4em;
+   transition: all 0.4s ease-in-out;
+}
+
+.member-card {
+   font-family: 'Raleway', sans-serif;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-around;
+   align-items: center;
+   border-radius: 12px;
+   overflow: hidden;
+   padding: 1em;
+   margin: 3.5em 1.5em;
+   background: var(--links);
+   box-shadow: 0 0 18px -9px rgba(0, 0, 0, 0.8);
+   transition: 0.4s ease-in-out;
+}
+
+.member-card:hover {
+   box-shadow: 0 0 20px -2px black;
+   transition: 0.4s ease-in-out;
+}
+
+.member-card:nth-child(1) {
+   background: #288f6d;
+}
+.member-card:nth-child(2) {
+   background: #3f69a6;
+}
+.member-card:nth-child(3) {
+   background: rgb(32, 32, 32);
+}
+.member-card:nth-child(4) {
+   background: rgb(33, 136, 184);
+}
+
+.name {
+   letter-spacing: 0.03em;
+   font-size: 2.5em;
+   padding: 0;
+   margin: 0 0 0.1em 0;
+   font-weight: bold;
+   color: white;
+}
+
+.job {
+   font-size: 1.4em;
+   font-weight: normal;
+   padding: 0;
+   margin: 0;
+   color: rgba(255, 255, 255, 0.781);
+}
+.member-img {
+   position: relative;
+   display: block;
+   padding: 0;
+   margin: 0;
+   width: 250px;
+   height: 250px;
+   overflow: hidden;
+   object-fit: cover;
+   clip-path: circle(40%);
+   transition: all 0.6s ease-in-out;
+}
+
+.member-card:hover > .member-img {
+   filter: brightness(60%);
+   opacity: 0.5;
+   transition: all 0.6s ease-in-out;
+}
+
+.member-links {
+   position: absolute;
+   font-size: 2em;
+   color: white;
+   opacity: 0;
+   transform: translate(0, -350%);
+   transition: all 0.4s cubic-bezier(1, 0.02, 0.24, 0.73);
+}
+.member-links a {
+   margin: 0.26em;
+   cursor: pointer;
+}
+
+.member-card:hover > .member-links {
+   opacity: 1;
+   transform: translate(0, -30%);
+   transition: all 0.6s cubic-bezier(1, 0.02, 0.24, 0.73);
+}
+
+.member-links:hover {
+   opacity: 1;
+   transform: none;
+}
+
+.bio {
+   font-size: 1.35em;
+   font-weight: lighter;
+   color: rgb(243, 243, 243);
+}
+
+/* Members Social Links Hover Effects*/
+.fb,
+.li,
+.ig,
+.git {
+   border-radius: 100%;
+   transition: all 0.3s ease-in-out;
+}
+.fb:hover {
+   background-color: #062bfc;
+   transition: all 0.3s ease-in-out;
+}
+.li:hover {
+   color: #2867b2;
+   background-color: white;
+   border-radius: 1px;
+   transition: all 0.3s ease-in-out;
+}
+.ig:hover {
+   background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+   );
+   transition: all 0.3s ease-in-out;
+}
+.git:hover {
+   background-color: #1a1a1a;
+   transition: all 0.3s ease-in-out;
+}
+/* END OF SOCIAL LINKS HOVER EFFECTS */
+
+@media all and (max-width: 750px) {
+   #section-d ul,
+   .member-card {
+      margin: 0 0;
+      border-radius: 0;
+   }
+}
