@@ -164,7 +164,7 @@ nav .active::after {
 #section-a-bg {
    position: absolute;
    background: linear-gradient(0deg, rgba(0, 0, 0, 0.39) 75%, #000000be 100%),
-      url('..pics/ceinge.jpg');
+      url('...pics/ceinge.jpg');
    background-position: 0 65%;
    background-size: cover;
    background-attachment: fixed;
